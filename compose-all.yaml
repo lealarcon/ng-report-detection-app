@@ -1,0 +1,25 @@
+version: '3'
+services:
+  iot-camera-wirid:
+    container_name: py-people-counter
+    privileged: true
+    image: face-detection-wirid:1.0.0 
+    ports:
+       - "80:8000"
+    volumes:
+       - /dev/video0:/dev/video0  
+  wirid-app-front:
+    container_name: wirid-app-front-docker
+    image: 'ng-people-counter:1.0.0'
+    environment:
+      - VIDEO_PYTON_REPLACE = 'http://py-people-counter/video_feed'
+      - TEST_CONTAINER_VAR = 'no se que se pone aca'
+
+    #network_mode: host
+    ports:
+      #- "3030:8080"
+      - "4200:80"
+    #command: npm start
+    restart: always
+
+
