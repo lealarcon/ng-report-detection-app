@@ -23,7 +23,7 @@
     "@syncfusion/ej2-angular-calendars": "^18.1.44",
     "@syncfusion/ej2-buttons": "^18.1.43",
     "echarts": "4.7.0",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "process": "^0.11.10",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
